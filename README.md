@@ -2,6 +2,6 @@
 <h6>Projekt v MonoGame</h6>
 v1<br>
   - ovládání pomocí WASD<br>
-  - střílení pomocí Levého tlačítka myši
+  - střílení pomocí Levého tlačítka myši<br>
 v2<br>
   - přidáno pozadí
