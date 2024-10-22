@@ -9,6 +9,7 @@ namespace TanksInWar;
 public class Game1 : Game
 {
     Texture2D _tankTexture;
+    Texture2D _backgroundTexture;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
@@ -17,11 +18,10 @@ public class Game1 : Game
     private float _tankRotation;
     private const float TankSpeed = 110f;
     private const float ProjectileSpeed = 500f;
-    private const float ProjectileLifetime = 4f;
+    private const float ProjectileLifetime = 1.5f;
 
     private List<Projectile> _projectiles;
     private bool _canShoot = true;
-
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -34,6 +34,11 @@ public class Game1 : Game
         _tankPosition = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
         _projectiles = new List<Projectile>();
         base.Initialize();
+        _graphics.IsFullScreen = false;
+        _graphics.PreferredBackBufferWidth = 768;
+        _graphics.PreferredBackBufferHeight = 432;
+        _graphics.ApplyChanges();
+
     }
 
     protected override void LoadContent()
@@ -41,6 +46,7 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         _tankTexture = Content.Load<Texture2D>("tank");
+        _backgroundTexture = Content.Load<Texture2D>("tankBackground");
 
         _projectileTexture = new Texture2D(GraphicsDevice, 5, 5);
         Color[] projectileData = new Color[5 * 5];
@@ -98,7 +104,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.BurlyWood);
         _spriteBatch.Begin();
-
+        _spriteBatch.Draw(_backgroundTexture, new Vector2(0,0), Color.White);
         _spriteBatch.Draw(_tankTexture, _tankPosition, null, Color.White, _tankRotation, new Vector2(25, 15),
             Vector2.One, SpriteEffects.None, 0f);
 

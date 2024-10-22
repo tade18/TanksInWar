@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TanksInWar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73bced978046fd3e282e8309863e87372e6f864a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TanksInWar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TanksInWar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

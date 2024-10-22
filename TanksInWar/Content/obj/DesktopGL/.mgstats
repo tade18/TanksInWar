@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/ball.png","C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/bin/DesktopGL/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0,0764918
+"C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tank.png","C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/bin/DesktopGL/tank.xnb","TextureProcessor","Texture2DContent",521,4409,0,002531
+"C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tankBackground.png","C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/bin/DesktopGL/tankBackground.xnb","TextureProcessor","Texture2DContent",61240,1327189,0,0507554

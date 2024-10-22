@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tank.png</SourceFile>
-  <SourceTime>2024-10-22T21:56:09.7637688+02:00</SourceTime>
-  <DestFile>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/bin/DesktopGL/Content/tank.xnb</DestFile>
-  <DestTime>2024-10-22T21:57:09.0270481+02:00</DestTime>
+  <SourceFile>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tankBackground.png</SourceFile>
+  <SourceTime>2024-10-22T21:31:51.1934702+02:00</SourceTime>
+  <DestFile>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/bin/DesktopGL/Content/tankBackground.xnb</DestFile>
+  <DestTime>2024-10-22T22:09:13.3966348+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
