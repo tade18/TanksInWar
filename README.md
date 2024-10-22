@@ -3,3 +3,5 @@
 v1<br>
   - ovládání pomocí WASD<br>
   - střílení pomocí Levého tlačítka myši
+v2<br>
+  - přidáno pozadí
