@@ -17,6 +17,7 @@ public class Game1 : Game
     private Vector2 _tankPosition;
     private float _tankRotation;
     private const float TankSpeed = 110f;
+    private const float RotationSpeed = 3f;
     private const float ProjectileSpeed = 500f;
     private const float ProjectileLifetime = 1.5f;
 
@@ -58,25 +59,26 @@ public class Game1 : Game
     {
         if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-
-        // Movement - WASD nebo šipky
+        
         var keyboardState = Keyboard.GetState();
         float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-        if (keyboardState.IsKeyDown(Keys.W))
-            _tankPosition.Y -= TankSpeed * deltaTime;
-        if (keyboardState.IsKeyDown(Keys.S))
-            _tankPosition.Y += TankSpeed * deltaTime;
+        
         if (keyboardState.IsKeyDown(Keys.A))
-            _tankPosition.X -= TankSpeed * deltaTime;
+            _tankRotation -= RotationSpeed * deltaTime;
         if (keyboardState.IsKeyDown(Keys.D))
-            _tankPosition.X += TankSpeed * deltaTime;
+            _tankRotation += RotationSpeed * deltaTime;
+        
+        Vector2 direction = new Vector2((float)Math.Cos(_tankRotation), (float)Math.Sin(_tankRotation));
 
-
+        if (keyboardState.IsKeyDown(Keys.W))
+            _tankPosition += direction * TankSpeed * deltaTime;
+        if (keyboardState.IsKeyDown(Keys.S))
+            _tankPosition -= direction * TankSpeed * deltaTime;
+        
+        _tankPosition.X = MathHelper.Clamp(_tankPosition.X, 0 + _tankTexture.Width/2, GraphicsDevice.Viewport.Width - _tankTexture.Width/2);
+        _tankPosition.Y = MathHelper.Clamp(_tankPosition.Y, 0 + _tankTexture.Height, GraphicsDevice.Viewport.Height - _tankTexture.Height);
+        
         var mouseState = Mouse.GetState();
-        Vector2 mousePosition = new Vector2(mouseState.X, mouseState.Y);
-        Vector2 direction = mousePosition - _tankPosition;
-        _tankRotation = (float)Math.Atan2(direction.Y, direction.X);
-
         if (mouseState.LeftButton == ButtonState.Pressed && _canShoot)
         {
             ShootProjectile();
@@ -86,11 +88,11 @@ public class Game1 : Game
         {
             _canShoot = true;
         }
-
+        
         for (int i = _projectiles.Count - 1; i >= 0; i--)
         {
             _projectiles[i].Update(deltaTime);
-
+            
             if (_projectiles[i].LifeTime > ProjectileLifetime)
             {
                 _projectiles.RemoveAt(i);
@@ -120,11 +122,10 @@ public class Game1 : Game
 
     private void ShootProjectile()
     {
-        Vector2 projectilePosition = _tankPosition;
-        Vector2 projectileDirection = new Vector2((float)Math.Cos(_tankRotation), (float)Math.Sin(_tankRotation));
+        Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+        Vector2 projectileDirection = Vector2.Normalize(mousePosition - _tankPosition);
 
-        Projectile newProjectile =
-            new Projectile(_projectileTexture, projectilePosition, projectileDirection, ProjectileSpeed);
+        Projectile newProjectile = new Projectile(_projectileTexture, _tankPosition, projectileDirection, ProjectileSpeed);
         _projectiles.Add(newProjectile);
     }
 
