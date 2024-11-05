@@ -54,3 +54,8 @@ C:\Users\tade1\Desktop\TanksInWar\TanksInWar\obj\Debug\net8.0\TanksInWar.pdb
 C:\Users\tade1\Desktop\TanksInWar\TanksInWar\obj\Debug\net8.0\TanksInWar.genruntimeconfig.cache
 C:\Users\tade1\Desktop\TanksInWar\TanksInWar\obj\Debug\net8.0\ref\TanksInWar.dll
 C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\tankBackground.xnb
+C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\tank_tower.xnb
+C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\ambientBackground.ogg
+C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\ambientBackground.xnb
+C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\fire.ogg
+C:\Users\tade1\Desktop\TanksInWar\TanksInWar\bin\Debug\net8.0\Content\fire.xnb

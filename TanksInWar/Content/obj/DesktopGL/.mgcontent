@@ -4,11 +4,17 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/ambientBackground.mp3</File>
     <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/ball.png</File>
+    <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/fire.mp3</File>
+    <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tank_tower.png</File>
     <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tank.png</File>
     <File>C:/Users/tade1/Desktop/TanksInWar/TanksInWar/Content/tankBackground.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
