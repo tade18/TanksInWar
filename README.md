@@ -1,5 +1,6 @@
 <h1>Tanks In War</h1>
 <h6>Projekt v MonoGame</h6>
+![logo](https://github.com/user-attachments/assets/56787016-11df-4763-ab31-eb94d0be130f)
 
 
 v4.0
